@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Supplementary Exercise</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+
+      <!-- START -->
+      <div id="startScreen">
+        <h1>Supplementary Exercise</h1>
+        <p class="muted">
+          Click Start to begin the supplementary exercise for this chapter.
+          After that, the audio will play automatically for each question.
+        </p>
+        <button id="startBtn">Start</button>
+      </div>
+
+      <!-- QUIZ -->
+      <div id="quizScreen" class="hidden">
+
+        <div class="topRow">
+          <div class="progressWrap" aria-label="Progress">
+            <div id="progressBar" class="progressBar"></div>
+          </div>
+          <button id="replayBtn" class="secondary">Replay audio</button>
+        </div>
+
+        <div class="prompt">Listen and choose the correct answer.</div>
+
+        <audio id="audio" preload="auto"></audio>
+
+        <div id="choices" class="choices"></div>
+
+        <div class="navRow">
+          <div id="feedback" class="feedback"></div>
+          <button id="nextBtn" disabled>Next</button>
+        </div>
+      </div>
+
+      <!-- RESULTS + REVIEW -->
+      <div id="doneScreen" class="hidden">
+        <h2>Results</h2>
+        <p id="scoreLine" class="scoreLine"></p>
+
+        <div class="reviewHeader">
+          <div class="reviewTitle">Review</div>
+          <button id="restartBtn" class="secondary">Restart</button>
+        </div>
+
+        <div id="reviewList" class="reviewList"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
