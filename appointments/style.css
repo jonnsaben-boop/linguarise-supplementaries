@@ -1,0 +1,176 @@
+* { box-sizing: border-box; font-family: Arial, Helvetica, sans-serif; }
+
+body { margin: 0; background: #f4f6f8; }
+
+.wrap {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.card {
+  width: 100%;
+  max-width: 640px;
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+
+.hidden { display: none; }
+
+h1, h2 { margin: 0 0 12px; }
+
+.muted { color: #444; margin: 0 0 16px; line-height: 1.4; }
+
+.prompt { margin: 10px 0 12px; color: #111; font-weight: 700; }
+
+.topRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+/* Barre de progression */
+.progressWrap {
+  flex: 1;
+  height: 12px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progressBar {
+  height: 100%;
+  width: 0%;
+  background: #22c55e;
+  transition: width 220ms ease;
+}
+
+audio { width: 100%; margin: 8px 0 14px; }
+
+.choices {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+/* Boutons de réponses : texte NOIR */
+.choiceBtn {
+  width: 100%;
+  text-align: left;
+  padding: 12px 12px;
+  border-radius: 10px;
+  border: 1px solid #d7dde3;
+  background: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  color: #000;              /* ✅ texte noir */
+}
+
+.choiceBtn:hover { background: #f7f9fb; }
+
+.choiceBtn.selected {
+  border-color: #2d6cdf;
+  background: #eef5ff;
+}
+
+.navRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.feedback {
+  min-height: 22px;
+  font-weight: 700;
+  color: #111;
+}
+
+button {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 10px;
+  background: #2d6cdf;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:disabled { opacity: .45; cursor: not-allowed; }
+
+.secondary { background: #6b7280; }
+
+.scoreLine {
+  font-weight: 700;
+  margin: 0 0 14px;
+}
+
+/* Section de révision */
+.reviewHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 10px 0 10px;
+}
+
+.reviewTitle {
+  font-weight: 900;
+  font-size: 18px;
+}
+
+/* Liste à défilement vertical continu */
+.reviewList {
+  max-height: 420px;
+  overflow-y: auto;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 12px;
+  background: #fafafa;
+}
+
+.reviewCard {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+.reviewCard:last-child { margin-bottom: 0; }
+
+.reviewQ {
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+
+.row {
+  margin: 6px 0;
+  color: #111;
+}
+
+.tag {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+  margin-left: 8px;
+}
+
+.tag.correct { background: #dcfce7; color: #14532d; }
+.tag.wrong { background: #fee2e2; color: #7f1d1d; }
+
+.explain {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background: #f1f5f9;
+  color: #111;
+  line-height: 1.35;
+}
